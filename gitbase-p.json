@@ -1,0 +1,83 @@
+{
+  "streams": [
+    {
+      "tap_stream_id": "gitbase-blobs",
+      "table_name": "blobs",
+      "schema": {
+        "properties": {
+          "repository_id": {
+            "type": "string"
+          },
+          "blob_hash": {
+            "type": "string"
+          },
+          "blob_size": {
+            "minimum": -9223372036854775808,
+            "maximum": 9223372036854775807,
+            "type": "integer"
+          },
+          "blob_content": {
+            "inclusion": "unsupported",
+            "description": "Unsupported column type blob"
+          }
+        },
+        "type": "object"
+      },
+      "stream": "blobs",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "selected-by-default": true,
+            "database-name": "gitbase",
+            "row-count": 0,
+            "selected": true,
+            "replication-method": "FULL_TABLE",
+            "is-view": false,
+            "table-key-properties": []
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "repository_id"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "text"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "blob_hash"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "text"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "blob_size"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "bigint"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "blob_content"
+          ],
+          "metadata": {
+            "selected-by-default": false,
+            "sql-datatype": "blob"
+          }
+        }
+      ]
+    }
+  ]
+}
