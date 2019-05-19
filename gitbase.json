@@ -1,0 +1,1195 @@
+{
+  "streams": [
+    {
+      "tap_stream_id": "gitbase-blobs",
+      "table_name": "blobs",
+      "schema": {
+        "properties": {
+          "repository_id": {
+            "inclusion": "available",
+            "maxLength": 255,
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "blob_hash": {
+            "inclusion": "available",
+            "maxLength": 255,
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "blob_size": {
+            "inclusion": "available",
+            "minimum": -9223372036854775808,
+            "maximum": 9223372036854775807,
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "blob_content": {
+            "inclusion": "unsupported",
+            "description": "Unsupported column type blob"
+          }
+        },
+        "type": "object"
+      },
+      "stream": "blobs",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "selected-by-default": false,
+            "database-name": "gitbase",
+            "row-count": 0,
+            "is-view": false,
+            "selected": true,
+            "replication-method": "FULL_TABLE",
+            "table-key-properties": []
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "repository_id"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "text"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "blob_hash"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "text"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "blob_size"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "bigint"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "blob_content"
+          ],
+          "metadata": {
+            "selected-by-default": false,
+            "sql-datatype": "blob"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "gitbase-commit_blobs",
+      "table_name": "commit_blobs",
+      "schema": {
+        "properties": {
+          "repository_id": {
+            "inclusion": "available",
+            "maxLength": 255,
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "commit_hash": {
+            "inclusion": "available",
+            "maxLength": 255,
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "blob_hash": {
+            "inclusion": "available",
+            "maxLength": 255,
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        },
+        "type": "object"
+      },
+      "stream": "commit_blobs",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "selected-by-default": false,
+            "database-name": "gitbase",
+            "row-count": 0,
+            "is-view": false,
+            "selected": true,
+            "replication-method": "FULL_TABLE",
+            "table-key-properties": []
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "repository_id"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "text"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "commit_hash"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "text"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "blob_hash"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "text"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "gitbase-commit_files",
+      "table_name": "commit_files",
+      "schema": {
+        "properties": {
+          "repository_id": {
+            "inclusion": "available",
+            "maxLength": 255,
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "commit_hash": {
+            "inclusion": "available",
+            "maxLength": 255,
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "file_path": {
+            "inclusion": "available",
+            "maxLength": 255,
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "blob_hash": {
+            "inclusion": "available",
+            "maxLength": 255,
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "tree_hash": {
+            "inclusion": "available",
+            "maxLength": 255,
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        },
+        "type": "object"
+      },
+      "stream": "commit_files",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "selected-by-default": false,
+            "database-name": "gitbase",
+            "row-count": 0,
+            "is-view": false,
+            "selected": true,
+            "replication-method": "FULL_TABLE",
+            "table-key-properties": []
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "repository_id"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "text"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "commit_hash"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "text"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "file_path"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "text"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "blob_hash"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "text"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "tree_hash"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "text"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "gitbase-commit_trees",
+      "table_name": "commit_trees",
+      "schema": {
+        "properties": {
+          "repository_id": {
+            "inclusion": "available",
+            "maxLength": 255,
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "commit_hash": {
+            "inclusion": "available",
+            "maxLength": 255,
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "tree_hash": {
+            "inclusion": "available",
+            "maxLength": 255,
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        },
+        "type": "object"
+      },
+      "stream": "commit_trees",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "selected-by-default": false,
+            "database-name": "gitbase",
+            "row-count": 0,
+            "is-view": false,
+            "selected": true,
+            "replication-method": "FULL_TABLE",
+            "table-key-properties": []
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "repository_id"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "text"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "commit_hash"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "text"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "tree_hash"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "text"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "gitbase-commits",
+      "table_name": "commits",
+      "schema": {
+        "properties": {
+          "repository_id": {
+            "inclusion": "available",
+            "maxLength": 255,
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "commit_hash": {
+            "inclusion": "available",
+            "maxLength": 255,
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "commit_author_name": {
+            "inclusion": "available",
+            "maxLength": 255,
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "commit_author_email": {
+            "inclusion": "available",
+            "maxLength": 255,
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "commit_author_when": {
+            "inclusion": "available",
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "committer_name": {
+            "inclusion": "available",
+            "maxLength": 255,
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "committer_email": {
+            "inclusion": "available",
+            "maxLength": 255,
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "committer_when": {
+            "inclusion": "available",
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "commit_message": {
+            "inclusion": "available",
+            "maxLength": 255,
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "tree_hash": {
+            "inclusion": "available",
+            "maxLength": 255,
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "commit_parents": {
+            "inclusion": "unsupported",
+            "description": "Unsupported column type json"
+          }
+        },
+        "type": "object"
+      },
+      "stream": "commits",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "selected-by-default": false,
+            "database-name": "gitbase",
+            "row-count": 0,
+            "is-view": false,
+            "selected": true,
+            "replication-method": "FULL_TABLE",
+            "table-key-properties": []
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "repository_id"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "text"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "commit_hash"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "text"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "commit_author_name"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "text"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "commit_author_email"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "text"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "commit_author_when"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "datetime"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "committer_name"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "text"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "committer_email"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "text"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "committer_when"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "datetime"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "commit_message"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "text"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "tree_hash"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "text"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "commit_parents"
+          ],
+          "metadata": {
+            "selected-by-default": false,
+            "sql-datatype": "json"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "gitbase-files",
+      "table_name": "files",
+      "schema": {
+        "properties": {
+          "repository_id": {
+            "inclusion": "available",
+            "maxLength": 255,
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "file_path": {
+            "inclusion": "available",
+            "maxLength": 255,
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "blob_hash": {
+            "inclusion": "available",
+            "maxLength": 255,
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "tree_hash": {
+            "inclusion": "available",
+            "maxLength": 255,
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "tree_entry_mode": {
+            "inclusion": "available",
+            "maxLength": 255,
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "blob_content": {
+            "inclusion": "unsupported",
+            "description": "Unsupported column type blob"
+          },
+          "blob_size": {
+            "inclusion": "available",
+            "minimum": -9223372036854775808,
+            "maximum": 9223372036854775807,
+            "type": [
+              "null",
+              "integer"
+            ]
+          }
+        },
+        "type": "object"
+      },
+      "stream": "files",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "selected-by-default": false,
+            "database-name": "gitbase",
+            "row-count": 0,
+            "is-view": false,
+            "selected": true,
+            "replication-method": "FULL_TABLE",
+            "table-key-properties": []
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "repository_id"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "text"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "file_path"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "text"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "blob_hash"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "text"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "tree_hash"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "text"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "tree_entry_mode"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "text"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "blob_content"
+          ],
+          "metadata": {
+            "selected-by-default": false,
+            "sql-datatype": "blob"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "blob_size"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "bigint"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "gitbase-ref_commits",
+      "table_name": "ref_commits",
+      "schema": {
+        "properties": {
+          "repository_id": {
+            "inclusion": "available",
+            "maxLength": 255,
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "commit_hash": {
+            "inclusion": "available",
+            "maxLength": 255,
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "ref_name": {
+            "inclusion": "available",
+            "maxLength": 255,
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "history_index": {
+            "inclusion": "available",
+            "minimum": -9223372036854775808,
+            "maximum": 9223372036854775807,
+            "type": [
+              "null",
+              "integer"
+            ]
+          }
+        },
+        "type": "object"
+      },
+      "stream": "ref_commits",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "selected-by-default": false,
+            "database-name": "gitbase",
+            "row-count": 0,
+            "is-view": false,
+            "selected": true,
+            "replication-method": "FULL_TABLE",
+            "table-key-properties": []
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "repository_id"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "text"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "commit_hash"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "text"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ref_name"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "text"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "history_index"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "bigint"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "gitbase-refs",
+      "table_name": "refs",
+      "schema": {
+        "properties": {
+          "repository_id": {
+            "inclusion": "available",
+            "maxLength": 255,
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "ref_name": {
+            "inclusion": "available",
+            "maxLength": 255,
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "commit_hash": {
+            "inclusion": "available",
+            "maxLength": 255,
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        },
+        "type": "object"
+      },
+      "stream": "refs",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "selected-by-default": false,
+            "database-name": "gitbase",
+            "row-count": 0,
+            "is-view": false,
+            "selected": true,
+            "replication-method": "FULL_TABLE",
+            "table-key-properties": []
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "repository_id"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "text"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "ref_name"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "text"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "commit_hash"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "text"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "gitbase-remotes",
+      "table_name": "remotes",
+      "schema": {
+        "properties": {
+          "repository_id": {
+            "inclusion": "available",
+            "maxLength": 255,
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "remote_name": {
+            "inclusion": "available",
+            "maxLength": 255,
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "remote_push_url": {
+            "inclusion": "available",
+            "maxLength": 255,
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "remote_fetch_url": {
+            "inclusion": "available",
+            "maxLength": 255,
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "remote_push_refspec": {
+            "inclusion": "available",
+            "maxLength": 255,
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "remote_fetch_refspec": {
+            "inclusion": "available",
+            "maxLength": 255,
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        },
+        "type": "object"
+      },
+      "stream": "remotes",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "selected-by-default": false,
+            "database-name": "gitbase",
+            "row-count": 0,
+            "is-view": false,
+            "selected": true,
+            "replication-method": "FULL_TABLE",
+            "table-key-properties": []
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "repository_id"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "text"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "remote_name"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "text"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "remote_push_url"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "text"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "remote_fetch_url"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "text"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "remote_push_refspec"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "text"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "remote_fetch_refspec"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "text"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "gitbase-repositories",
+      "table_name": "repositories",
+      "schema": {
+        "properties": {
+          "repository_id": {
+            "inclusion": "available",
+            "maxLength": 255,
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        },
+        "type": "object"
+      },
+      "stream": "repositories",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "selected-by-default": false,
+            "database-name": "gitbase",
+            "row-count": 0,
+            "is-view": false,
+            "selected": true,
+            "replication-method": "FULL_TABLE",
+            "table-key-properties": []
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "repository_id"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "text"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "gitbase-tree_entries",
+      "table_name": "tree_entries",
+      "schema": {
+        "properties": {
+          "repository_id": {
+            "inclusion": "available",
+            "maxLength": 255,
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "tree_entry_name": {
+            "inclusion": "available",
+            "maxLength": 255,
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "blob_hash": {
+            "inclusion": "available",
+            "maxLength": 255,
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "tree_hash": {
+            "inclusion": "available",
+            "maxLength": 255,
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "tree_entry_mode": {
+            "inclusion": "available",
+            "maxLength": 255,
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        },
+        "type": "object"
+      },
+      "stream": "tree_entries",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "selected-by-default": false,
+            "database-name": "gitbase",
+            "row-count": 0,
+            "is-view": false,
+            "selected": true,
+            "replication-method": "FULL_TABLE",
+            "table-key-properties": []
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "repository_id"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "text"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "tree_entry_name"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "text"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "blob_hash"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "text"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "tree_hash"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "text"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "tree_entry_mode"
+          ],
+          "metadata": {
+            "selected-by-default": true,
+            "sql-datatype": "text"
+          }
+        }
+      ]
+    }
+  ]
+}
