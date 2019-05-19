@@ -52,3 +52,24 @@ docker-compose up -d
 ```code
 ./gitbase/bin/tap-mysql -c mysql-tap.json -p gitbase.json | ./pg/bin/target-postgres -c pg-target.json
 ```
+
+## some notes
+
+for better data stora you can create new schema in pg database with below
+
+```code
+create schema gitbase
+```
+
+and change pg target with below
+
+```code
+{
+    "host": "localhost",
+    "port": 5432,
+    "dbname": "postgres",
+    "user": "postgres",
+    "password": "dalong",
+    "schema": "gitbase"
+}
+```
