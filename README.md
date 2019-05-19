@@ -1,4 +1,4 @@
-# use Singer tap-mysql migrate date to postgresql
+# use Singer tap-mysql migrate data to postgresql
 
 ## how to running
 
